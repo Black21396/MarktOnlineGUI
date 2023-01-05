@@ -1,0 +1,14 @@
+<div class="my-3">
+    <div class="form-group w-25">
+       <app-select [data]= "categories" [title]= "'Categories'" (selectedValue)="filterCategory($event)"></app-select>
+    </div>
+    
+   <div class="row" *ngIf="!loading">
+    <div class="col-md-3 col-sm-12" *ngFor="let item of products">
+      <app-product [data]="item" (item)="addToCart($event)"></app-product>
+</div>
+   </div>
+
+   <!--Add loading component (during the server get the result(products))-->
+     <app-spinner></app-spinner>
+   

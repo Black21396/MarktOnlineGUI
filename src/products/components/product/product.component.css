@@ -1,0 +1,7 @@
+.zoomProduct{
+    transition: transform .2s;
+}
+
+.zoomProduct:hover{
+    transform: scale(1.1);
+}

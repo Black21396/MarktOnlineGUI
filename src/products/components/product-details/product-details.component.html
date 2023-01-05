@@ -1,0 +1,18 @@
+<div class="container my-5 d-flex justify-content-around" *ngIf="!loading">
+    <div class="mr-4">
+        <img src="{{data.image}}" alt="" width="300px">
+    </div>
+    <div>
+        <ul class="list-unstyled">
+            <li ><strong>Title</strong><br>{{data.title}}</li>
+            <li><strong>Category</strong><br>{{data.category}}</li>
+            <li><strong>Description</strong><br>{{data.description}}</li>
+            <li><strong>Price</strong><br>{{data.price}}</li>
+    
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
